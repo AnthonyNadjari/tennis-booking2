@@ -196,18 +196,18 @@ def main():
         booking_url = urlunparse(parsed._replace(query=new_query))
 
         # Wait until specific times to perform actions
-        #timer('18:55')  # because git is late
+        timer('18:55')  # because git is late
 
         # Initialize the WebDriver
         driver = webdriver.Chrome(service=Service(CHROME_DRIVER_PATH), options=options)
         wait = WebDriverWait(driver, 10)
 
         # Login
-        #timer('18:57')
+        timer('18:57')
         initialize()
 
         # Book
-        #timer('19:00')
+        timer('19:00')
         driver.get(booking_url)
         logging.info(f"Navigated to booking URL: {booking_url}")
 
